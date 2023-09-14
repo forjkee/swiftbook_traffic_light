@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,60 +13,62 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="traffic_light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sx-3s-d1J">
-                                <rect key="frame" x="75" y="72" width="225" height="150"/>
+                                <rect key="frame" x="100" y="69" width="193" height="193"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="6sx-3s-d1J" secondAttribute="height" multiplier="1.5:1" id="Kfz-8V-wrc"/>
+                                    <constraint firstAttribute="width" secondItem="6sx-3s-d1J" secondAttribute="height" multiplier="1:1" id="Kfz-8V-wrc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93m-gF-kPR">
-                                <rect key="frame" x="75" y="247" width="225" height="150"/>
+                                <rect key="frame" x="100" y="272" width="193" height="193"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDb-Ge-Xbz">
-                                <rect key="frame" x="75" y="422" width="225" height="150"/>
+                                <rect key="frame" x="100" y="475" width="193" height="193"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-85-gKQ">
-                                <rect key="frame" x="96.666666666666686" y="622" width="182" height="74"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKO-zu-M3s">
+                                <rect key="frame" x="100" y="693" width="193" height="45.333333333333371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Turn on">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                    <color key="baseForegroundColor" systemColor="linkColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="turnButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TDK-wp-bhh"/>
+                                    <action selector="turnButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kpz-UY-Dhf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="kM1-85-gKQ" firstAttribute="centerX" secondItem="KDb-Ge-Xbz" secondAttribute="centerX" id="1iQ-0K-6A0"/>
-                            <constraint firstItem="6sx-3s-d1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="20R-vZ-va3"/>
+                            <constraint firstItem="wKO-zu-M3s" firstAttribute="width" secondItem="KDb-Ge-Xbz" secondAttribute="width" id="0Ir-xw-Qw1"/>
+                            <constraint firstItem="6sx-3s-d1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="20R-vZ-va3"/>
                             <constraint firstItem="93m-gF-kPR" firstAttribute="height" secondItem="6sx-3s-d1J" secondAttribute="height" id="3AZ-d2-kLO"/>
-                            <constraint firstItem="93m-gF-kPR" firstAttribute="top" secondItem="6sx-3s-d1J" secondAttribute="bottom" constant="25" id="DJd-V9-VFg"/>
-                            <constraint firstItem="kM1-85-gKQ" firstAttribute="top" secondItem="KDb-Ge-Xbz" secondAttribute="bottom" constant="50" id="GVi-ys-p5y"/>
-                            <constraint firstItem="6sx-3s-d1J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="U7Z-P2-zHw"/>
-                            <constraint firstItem="KDb-Ge-Xbz" firstAttribute="width" secondItem="93m-gF-kPR" secondAttribute="height" multiplier="3:2" id="Vhc-x7-hnm"/>
-                            <constraint firstItem="93m-gF-kPR" firstAttribute="width" secondItem="6sx-3s-d1J" secondAttribute="height" multiplier="3:2" id="XjA-NA-fyw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6sx-3s-d1J" secondAttribute="trailing" constant="75" id="YsE-8f-9i7"/>
-                            <constraint firstItem="kM1-85-gKQ" firstAttribute="width" secondItem="KDb-Ge-Xbz" secondAttribute="width" multiplier="0.808889" id="d5R-a8-Xnh"/>
+                            <constraint firstItem="93m-gF-kPR" firstAttribute="top" secondItem="6sx-3s-d1J" secondAttribute="bottom" constant="10" id="DJd-V9-VFg"/>
+                            <constraint firstItem="6sx-3s-d1J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="U7Z-P2-zHw"/>
+                            <constraint firstItem="KDb-Ge-Xbz" firstAttribute="width" secondItem="93m-gF-kPR" secondAttribute="height" multiplier="1:1" id="Vhc-x7-hnm"/>
+                            <constraint firstItem="93m-gF-kPR" firstAttribute="width" secondItem="6sx-3s-d1J" secondAttribute="height" multiplier="1:1" id="XjA-NA-fyw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6sx-3s-d1J" secondAttribute="trailing" constant="100" id="YsE-8f-9i7"/>
+                            <constraint firstItem="wKO-zu-M3s" firstAttribute="centerX" secondItem="KDb-Ge-Xbz" secondAttribute="centerX" id="bq6-Wy-cGB"/>
                             <constraint firstItem="KDb-Ge-Xbz" firstAttribute="centerX" secondItem="93m-gF-kPR" secondAttribute="centerX" id="jvw-tv-zRS"/>
                             <constraint firstItem="93m-gF-kPR" firstAttribute="centerX" secondItem="6sx-3s-d1J" secondAttribute="centerX" id="puF-ck-4kJ"/>
                             <constraint firstItem="KDb-Ge-Xbz" firstAttribute="height" secondItem="93m-gF-kPR" secondAttribute="height" id="qGt-sZ-GFj"/>
-                            <constraint firstItem="KDb-Ge-Xbz" firstAttribute="top" secondItem="93m-gF-kPR" secondAttribute="bottom" constant="25" id="y3l-ao-Ihu"/>
+                            <constraint firstItem="wKO-zu-M3s" firstAttribute="top" secondItem="KDb-Ge-Xbz" secondAttribute="bottom" constant="25" id="uuY-1m-m9k"/>
+                            <constraint firstItem="KDb-Ge-Xbz" firstAttribute="top" secondItem="93m-gF-kPR" secondAttribute="bottom" constant="10" id="y3l-ao-Ihu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenView" destination="KDb-Ge-Xbz" id="bMn-J9-gBX"/>
+                        <outlet property="leftConstraintRedView" destination="20R-vZ-va3" id="Ifw-RP-jF8"/>
                         <outlet property="redView" destination="6sx-3s-d1J" id="c71-Uu-WDo"/>
-                        <outlet property="turnButton" destination="kM1-85-gKQ" id="TcS-T1-jcF"/>
+                        <outlet property="rightConstraintRedView" destination="YsE-8f-9i7" id="zxg-h4-26N"/>
+                        <outlet property="turnButton" destination="wKO-zu-M3s" id="RPk-gT-6v3"/>
                         <outlet property="yellowView" destination="93m-gF-kPR" id="iBM-Qa-paa"/>
                     </connections>
                 </viewController>
@@ -76,8 +78,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
